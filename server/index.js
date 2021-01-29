@@ -1,9 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import cors from 'cors';
 import mongoose from 'mongoose';
+import cors from 'cors';
 
-import postRoutes from './routes/post.js';
+import postRoutes from './routes/posts.js';
 
 
 //server
@@ -35,4 +35,4 @@ mongoose.set('useFindAndModify', false);
 
 
 app.use(express.json());
-app.use('/post' , postRoutes);
+app.use('/posts' , postRoutes);
