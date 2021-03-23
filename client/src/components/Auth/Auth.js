@@ -14,8 +14,8 @@ import Input from "./Input";
 const Auth = () => {
   const classes = useStyles();
   const [showPassword, setShowPassword] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
 
-  const isSignup = false;
 
   const handleShowPassword = () =>
     setShowPassword((prevShowPassword) => !prevShowPassword);
@@ -24,13 +24,19 @@ const Auth = () => {
 
   const handleChange = () => {};
 
+  const switchMode = () => {
+    setIsSignup((prevIsSignup) => !prevIsSignup)
+    handleShowPassword(false);
+  };
+
+
   return (
     <Container component="main" maxWidth="xs">
       <Paper className={classes.paper} elevation={3}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
         </Avatar>
-        <Typography component="h1" variant="h5">{ isSignup ? 'Sign up' : 'Sign in' }</Typography>
+        <Typography component="h1" variant="h5">{ isSignup ? 'Sign Up' : 'Sign In' }</Typography>
         <form className={classes.form} onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             { isSignup && (
@@ -46,6 +52,13 @@ const Auth = () => {
           <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
             { isSignup ? 'Sign Up' : 'Sign In' }
           </Button>
+          <Grid container justify="flex-end">
+              <Grid item>
+                  <Button onClick={switchMode}>
+                      { isSignup ? 'Already have an account? Sign In' : "Don't have an account? Sign Up"}
+                  </Button>
+              </Grid>
+          </Grid>
         </form>
       </Paper>
     </Container>
