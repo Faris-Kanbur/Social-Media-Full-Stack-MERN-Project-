@@ -35,5 +35,6 @@ return (
         </Toolbar>
 
     </AppBar>
-)};
+);
+};
 export default Navbar;
