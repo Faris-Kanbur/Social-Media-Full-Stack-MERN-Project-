@@ -16,7 +16,7 @@ export default makeStyles((theme) => ({
     textDecoration: 'none',
   },
   image: {
-    marginLeft: '15px',
+    height: '35px',
   },
   toolbar: {
     display: 'flex',
@@ -25,8 +25,9 @@ export default makeStyles((theme) => ({
   },
   profile: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-evenly',
     width: '400px',
+    marginLeft: '80px'
   },
   userName: {
     display: 'flex',
