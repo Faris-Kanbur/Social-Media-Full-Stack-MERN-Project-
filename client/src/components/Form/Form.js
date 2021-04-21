@@ -47,7 +47,8 @@ const Form = ({ currentId, setCurrentId}) => {
             <Paper className={classes.paper}>
                 <Typography variant="h6" align="center">
                     Please Sign In to Create your own memories and like other's memories. 
-                </Typography>
+                    </Typography>
+                    <img className={classes.image} src="https://thumbs.gfycat.com/HappyLoneGoldeneye-max-1mb.gif" alt="icon" height="60" />
             </Paper>
         )
     }

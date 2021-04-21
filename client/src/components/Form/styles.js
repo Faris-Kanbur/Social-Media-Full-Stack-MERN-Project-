@@ -9,6 +9,11 @@ export default makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
   },
+  image: {
+    display: 'block',
+    margin: 'auto',
+    height: '100px'
+  },
   form: {
     display: 'flex',
     flexWrap: 'wrap',
